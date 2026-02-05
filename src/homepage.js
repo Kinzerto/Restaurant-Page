@@ -13,7 +13,6 @@ import starUnFilled from './assets/images/fi-br-star.svg';
 
 export function homepageLoad() {
     const homepage = createElem('div', 'homepage', content);
-    content.appendChild(homepage);
 
 
     function createElem(element, className, parent) {
