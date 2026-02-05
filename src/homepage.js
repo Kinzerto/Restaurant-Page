@@ -11,16 +11,17 @@ import food2 from './assets/images/image 13.png';
 import starFilled from './assets/images/fi-sr-star.svg';
 import starUnFilled from './assets/images/fi-br-star.svg';
 
-export function homepageLoad() {
+function createElem(element, className, parent) {
+    const elem = document.createElement(element);
+    elem.classList.add(className);
+    parent.appendChild(elem);
+    return elem;
+}
+
+export function homepageLoad(parent) {
+    const content = parent ;
     const homepage = createElem('div', 'homepage', content);
 
-
-    function createElem(element, className, parent) {
-        const elem = document.createElement(element);
-        elem.classList.add(className);
-        parent.appendChild(elem);
-        return elem;
-    }
     // SECTION LEFT
     const section = createElem("section", "left-section", homepage);
 
@@ -87,60 +88,85 @@ export function homepageLoad() {
     //lower Display
     const specialty = createElem('div', 'specialty', rightSection);
 
-    const fav1 = createElem('div', 'fav1', specialty);
-    const fav1Menu = createElem('img', 'fav1-img', fav1)
-    fav1Menu.src = food1;
+    //Create a function to generate the favorite food items
+    function createFavorite(parent, imageSrc, name, price, rating) {
+        const fav = createElem('div', 'fav', parent);
 
-    //Fav1 Container
-    const fav1MenuDetails = createElem('div', 'fav1MenuDetails', fav1);
-    // Its Content
-    const foodName1 = createElem('div', 'foodName', fav1MenuDetails);
-    foodName1.textContent = 'Spicy noodles';
-    const ratings1 = createElem('div', 'ratings', fav1MenuDetails);
-    // star rating
-    for (let i = 1; i <= 5; i++) {
-        const star = createElem('img', 'star', ratings1);
-        if (i <= 3) {
-            star.src = starFilled;
-        } else {
-            star.src = starUnFilled;
+        const img = createElem('img', 'fav-img', fav);
+        img.src = imageSrc;
+
+        const details = createElem('div', 'favMenuDetails', fav);
+
+        const foodName = createElem('div', 'foodName', details);
+        foodName.textContent = name;
+
+        const ratings = createElem('div', 'ratings', details);
+        for (let i = 1; i <= 5; i++) {
+            const star = createElem('img', 'star', ratings);
+            star.src = i <= rating ? starFilled : starUnFilled;
         }
+
+        const priceDiv = createElem('div', 'price', details);
+        createElem('span', 'dollarSign', priceDiv).textContent = '$';
+        createElem('span', 'amount', priceDiv).textContent = price;
     }
-    const price1 = createElem('div', 'price', fav1MenuDetails);
-    const dollar1 = createElem('span', 'dollarSign', price1);
-    dollar1.textContent = '$';
-    const amount1 = createElem('span', 'amount', price1);
-    amount1.textContent = '23.00';
+    createFavorite(specialty, food1, "Spicy noodles", "23.00", 3);
+    createFavorite(specialty, food2, "Spicy noodles", "23.00", 3);
 
-    const fav2 = createElem('div', 'fav2', specialty);
-    // FAV2 CONTAINER
-    const fav2Menu = createElem('img', 'fav2-img', fav2)
-    fav2Menu.src = food2;
+    // const fav1 = createElem('div', 'fav1', specialty);
+    // const fav1Menu = createElem('img', 'fav1-img', fav1)
+    // fav1Menu.src = food1;
 
-    //Fav2 Container
-    const fav2MenuDetails = createElem('div', 'fav2MenuDetails', fav2);
-    // Its Content
-    const foodName2 = createElem('div', 'foodName', fav2MenuDetails);
-    foodName2.textContent = 'Spicy noodles';
-    const ratings2 = createElem('div', 'ratings', fav2MenuDetails);
-    // star rating
-    for (let i = 1; i <= 5; i++) {
-        const star = createElem('img', 'star', ratings2);
-        if (i <= 3) {
-            star.src = starFilled;
-        } else {
-            star.src = starUnFilled;
-        }
-    }
-    const price2 = createElem('div', 'price', fav2MenuDetails);
-    const dollar2 = createElem('span', 'dollarSign', price2);
-    dollar2.textContent = '$';
-    const amount2 = createElem('span', 'amount', price2);
-    amount2.textContent = '23.00';
+    // //Fav1 Container
+    // const fav1MenuDetails = createElem('div', 'fav1MenuDetails', fav1);
+    // // Its Content
+    // const foodName1 = createElem('div', 'foodName', fav1MenuDetails);
+    // foodName1.textContent = 'Spicy noodles';
+    // const ratings1 = createElem('div', 'ratings', fav1MenuDetails);
+    // // star rating
+    // for (let i = 1; i <= 5; i++) {
+    //     const star = createElem('img', 'star', ratings1);
+    //     if (i <= 3) {
+    //         star.src = starFilled;
+    //     } else {
+    //         star.src = starUnFilled;
+    //     }
+    // }
+    // const price1 = createElem('div', 'price', fav1MenuDetails);
+    // const dollar1 = createElem('span', 'dollarSign', price1);
+    // dollar1.textContent = '$';
+    // const amount1 = createElem('span', 'amount', price1);
+    // amount1.textContent = '23.00';
 
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    // const fav2 = createElem('div', 'fav2', specialty);
+    // // FAV2 CONTAINER
+    // const fav2Menu = createElem('img', 'fav2-img', fav2)
+    // fav2Menu.src = food2;
 
-    console.log(`Width: ${width}px, Height: ${height}px`);
+    // //Fav2 Container
+    // const fav2MenuDetails = createElem('div', 'fav2MenuDetails', fav2);
+    // // Its Content
+    // const foodName2 = createElem('div', 'foodName', fav2MenuDetails);
+    // foodName2.textContent = 'Spicy noodles';
+    // const ratings2 = createElem('div', 'ratings', fav2MenuDetails);
+    // // star rating
+    // for (let i = 1; i <= 5; i++) {
+    //     const star = createElem('img', 'star', ratings2);
+    //     if (i <= 3) {
+    //         star.src = starFilled;
+    //     } else {
+    //         star.src = starUnFilled;
+    //     }
+    // }
+    // const price2 = createElem('div', 'price', fav2MenuDetails);
+    // const dollar2 = createElem('span', 'dollarSign', price2);
+    // dollar2.textContent = '$';
+    // const amount2 = createElem('span', 'amount', price2);
+    // amount2.textContent = '23.00';
+
+    // const width = window.innerWidth;
+    // const height = window.innerHeight;
+
+    // console.log(`Width: ${width}px, Height: ${height}px`);
 
 }

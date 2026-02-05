@@ -12,11 +12,12 @@ const content = document.getElementById('content');
 nav.addEventListener('click', (event) => {
 
     if (!event.target.closest('button')) return;
+
     const currentClick = event.target.textContent;
+    content.replaceChildren();
     switch (currentClick) {
         case 'Home':
-            content.innerHTML = '';
-            homepageLoad()
+            homepageLoad(content);
             break;
         case 'Menu':
             content.textContent = menu
@@ -26,5 +27,5 @@ nav.addEventListener('click', (event) => {
 });
 
 
-homepageLoad();
+homepageLoad(content);
 
