@@ -1,35 +1,36 @@
 @use "./styles" as *;
 
 $main-font: Inter;
+$minus: 20px;
 
 #content .homepage {
     padding: 0 var(--sides-padding);
     display: grid;
-    min-height: calc(100vh - 64px);
-    // height: 70vh;
+    width: 100%;
+    min-height: 100vh;
     grid-template-columns: 1fr 1fr;
-    // align-items: end;
-    // height: ;
-    border: 1px solid red;
+    // border: 1px solid red;
+
 
 
     .left-section {
-        border: 1px solid red;
+        // border: 1px solid blue;
         grid-row: 1/-1;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-height: 900px;
 
         h1 {
-            border: 1px solid red;
+
             color: #000;
             font-family: $main-font;
             // font-size: 46px;
-            font-size: clamp(46px, -29.8519px + 7.4074cqi, 62px);
+            font-size: clamp(26px, -29.8519px + 7.4074cqi, 50px);
             font-style: normal;
             font-weight: 800;
             line-height: 110.523%;
-            max-width: 596px;
+            // min-width: 596px;
             // height: auto;
 
             /* 90.224px */
@@ -39,14 +40,14 @@ $main-font: Inter;
         }
 
         p {
-            border: 1px solid red;
+
             grid-column: 1/2;
-            max-width: 622px;
+            max-width: 500px;
             padding-top: 59px;
             color: #4A4A4A;
             font-family: $main-font;
-            // font-size: clamp(18px, -19.9259px + 3.7037cqi, 26px);
-            font-size: 26px;
+            font-size: clamp(18px, -19.9259px + 3.7037cqi, 26px);
+            // font-size: 26px;
             font-style: normal;
             font-weight: 500;
             line-height: 170.5%;
@@ -102,142 +103,159 @@ $main-font: Inter;
         }
     }
 
-    .right-section {
-        grid-column: 2/-1;
-        grid-row: 2/-1;
-        display: grid;
-        justify-self: right;
-        // border: 2px solid red;
-        border: 1px solid gold;
+    .right-section  {
+        // height: 0vh;
+        // grid-column: 2/-1;
+        // grid-row: /-1;
+        display: flex;
+        max-height: 900px;
+        // border: 2px solid green;
+        // border: 1px solid gold;
         position: relative;
 
-        .circle {
-            position: absolute;
-            bottom: 0;
-            grid-column: 1/3;
-            grid-row: 1/-1;
-            width: 662.703px;
-            height: 653.969px;
-            border-radius: 500px;
-            background: #53EC62;
+        .commentContainer {
             // border: 2px solid red;
-            
+            height: min-content;
             position: relative;
+            left: 30px;
+            top: 150px;
 
-            img.girl {
-                position: absolute;
-                width: 722.203px;
-                height: 797.316px;
-                // border: 2px solid;
-                left: -59px;
-                top: -142px;
+            // width: max-content;
+            .comment {
+                // border: 1px solid red;
+                height: min-content;
+                position: relative;
+                z-index: 1;
+                left: -140px;
+                // margin-top: 90px3
             }
 
-            .commentContainer {
-                // border: 2px solid red;
+            .message {
+                position: absolute;
+                left: -70px;
+                top: 45px;
+                z-index: 1;
+                color: #FF6868;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
 
-                // width: max-content;
-                .comment {
-                    // border: 1px solid red;
-                    height: min-content;
-                    position: relative;
-                    z-index: 1;
-                    left: -140px;
-                    // margin-top: 90px3
-                }
+        }
 
-                .message {
-                    position: absolute;
-                    left: -70px;
-                    top: 45px;
-                    z-index: 1;
-                    color: #FF6868;
+        .specialty {
+            opacity: 1;
+            // border: 3px solid saddlebrown;
+            display: flex;
+            position: absolute;
+            left: 45%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            gap: 50px;
+            // transform: translate(-50%, -50%);
+
+
+            .fav1,
+            .fav2 {
+                // opacity: 1;
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                width: 300px;
+                height: 132px;
+                background-color: red;
+                border-radius: 25px;
+                background: #FFF;
+                box-shadow: 7px 35px 51px 0 rgba(0, 0, 0, 0.14);
+            }
+
+            .fav1-img,
+            .fav2-img {
+                width: 98px;
+                height: 98px;
+                border-radius: 15px;
+                background: #EDEDED;
+            }
+
+            // .fav1 {
+            // fav1 > fav1MenuDetails $ fav2 > fav2MenuDetails
+            .fav1MenuDetails,
+            .fav2MenuDetails {
+                // border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 20px;
+                height: 98px;
+                width: auto;
+
+                .foodName {
+                    color: #2C2C2C;
                     font-family: Inter;
-                    font-size: 20px;
+                    font-size: 22px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
                 }
 
-            }
-
-            .specialty {
-                display: flex;
-                position: absolute;
-                bottom: -70px;
-                left: -80px;
-                gap: 50px;
-
-                .fav1,
-                .fav2 {
-                    opacity: 0;
+                .ratings {
+                    height: initial;
                     display: flex;
-                    align-items: center;
-                    padding-left: 20px;
-                    width: 349px;
-                    height: 132px;
-                    background-color: red;
-                    border-radius: 25px;
-                    background: #FFF;
-                    box-shadow: 7px 35px 51px 0 rgba(0, 0, 0, 0.14);
+                    gap: 7px;
                 }
 
-                .fav1-img,
-                .fav2-img {
-                    width: 98px;
-                    height: 98px;
-                    border-radius: 15px;
-                    background: #EDEDED;
-                }
+                .price {
 
-                // .fav1 {
-                // fav1 > fav1MenuDetails $ fav2 > fav2MenuDetails
-                .fav1MenuDetails,
-                .fav2MenuDetails {
-                    // border: 1px solid red;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    margin-left: 20px;
-                    height: 98px;
-                    width: auto;
-
-                    .foodName {
-                        color: #2C2C2C;
+                    .dollarSign {
+                        color: #FF7979;
                         font-family: Inter;
-                        font-size: 22px;
+                        font-size: 18px;
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
                     }
 
-                    .ratings {
-                        height: initial;
-                        display: flex;
-                        gap: 7px;
-                    }
-
-                    .price {
-
-                        .dollarSign {
-                            color: #FF7979;
-                            font-family: Inter;
-                            font-size: 18px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: normal;
-                        }
-
-                        .amount {
-                            color: #515151;
-                            font-family: Inter;
-                            font-size: 24px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: normal;
-                        }
+                    .amount {
+                        color: #515151;
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
                     }
                 }
+            }
+
+
+        }
+
+        .circle {
+            // align-self: flex-end;
+            position: absolute;
+            width: calc(596px - #{$minus});
+            height: calc(588px - #{$minus});
+             
+
+
+            border-radius: 500px;
+            background: #53EC62;
+            // border: 2px solid red;
+            // position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // position: relative;
+
+            img.girl {
+                // border: 2px solid blue;
+                position: absolute;
+                width: calc(650px - #{$minus});
+                height: auto;
+                bottom: 0px;
+                right: -4px;
 
 
             }
