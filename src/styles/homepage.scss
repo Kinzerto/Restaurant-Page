@@ -103,7 +103,7 @@ $minus: 20px;
         }
     }
 
-    .right-section  {
+    .right-section {
         // height: 0vh;
         // grid-column: 2/-1;
         // grid-row: /-1;
@@ -157,8 +157,7 @@ $minus: 20px;
             // transform: translate(-50%, -50%);
 
 
-            .fav1,
-            .fav2 {
+            .fav {
                 // opacity: 1;
                 display: flex;
                 align-items: center;
@@ -171,8 +170,7 @@ $minus: 20px;
                 box-shadow: 7px 35px 51px 0 rgba(0, 0, 0, 0.14);
             }
 
-            .fav1-img,
-            .fav2-img {
+            .fav-img {
                 width: 98px;
                 height: 98px;
                 border-radius: 15px;
@@ -181,8 +179,7 @@ $minus: 20px;
 
             // .fav1 {
             // fav1 > fav1MenuDetails $ fav2 > fav2MenuDetails
-            .fav1MenuDetails,
-            .fav2MenuDetails {
+            .favMenuDetails {
                 // border: 1px solid red;
                 display: flex;
                 flex-direction: column;
@@ -236,7 +233,7 @@ $minus: 20px;
             position: absolute;
             width: calc(596px - #{$minus});
             height: calc(588px - #{$minus});
-             
+
 
 
             border-radius: 500px;
