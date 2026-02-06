@@ -12,7 +12,7 @@ import food2 from './assets/images/image 13.png';
 import starFilled from './assets/images/fi-sr-star.svg';
 import starUnFilled from './assets/images/fi-br-star.svg';
 
-function createElem(element, className, parent) {
+export function createElem(element, className, parent) {
     const elem = document.createElement(element);
     elem.classList.add(className);
     parent.appendChild(elem);
