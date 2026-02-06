@@ -53,5 +53,5 @@ contactBtn.addEventListener('click', () => {
 
 
 
-servicesPage(content);
+homepageLoad(content);
 
