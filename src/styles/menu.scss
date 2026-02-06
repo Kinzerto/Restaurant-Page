@@ -1,0 +1,21 @@
+@use "./styles" as *;
+
+#content .menuPage {
+    padding: 0 var(--sides-padding);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+
+    .customerFav {
+        color: #FF6868;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
