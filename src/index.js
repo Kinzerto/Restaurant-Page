@@ -3,9 +3,10 @@ import "./styles/styles.scss";
 import "./styles/homepage.scss";
 import "./styles/menu.scss";
 import "./styles/maintenance.scss";
+import "./styles/services.scss";
 import { maintenancePage } from './maintenance.js';
 import { menuPage } from './menu.js';
-
+import {servicesPage} from './services.js';
 
 //homepage
 import { homepageLoad } from './homepage.js';
@@ -30,8 +31,8 @@ nav.addEventListener('click', (event) => {
         case 'menu':
             menuPage(content);
             break;
-        case 'contact':
-            maintenancePage(content);
+        case 'services':
+            servicesPage(content);
             break;
         default:
             break;
@@ -52,5 +53,5 @@ contactBtn.addEventListener('click', () => {
 
 
 
-maintenancePage(content);
+servicesPage(content);
 

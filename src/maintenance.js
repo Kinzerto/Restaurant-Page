@@ -6,7 +6,7 @@ function createElem(element, className, parent) {
     return elem;
 }
 export function maintenancePage(content) {
-    content.textContent = ""; // Clear existing content
+    content.replaceChildren(); // Clear existing content
     document.title = "Contact";
     console.log(content);
     
@@ -25,7 +25,5 @@ export function maintenancePage(content) {
     createElem("div", "pin pin2", signboardWrapper);
     createElem("div", "pin pin3", signboardWrapper);
     console.log('kin');
-
-    
 
 }

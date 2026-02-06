@@ -1,0 +1,119 @@
+#content .services {
+    // border: 1px solid red;
+    display: flex;
+    padding-top: 50px;
+
+
+    .leftSection {
+        // border: 1px solid red;
+        margin-top: 47px;
+
+        .storyAndServices {
+            color: #FF6868;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            margin-bottom: 53px;
+        }
+
+        //text container
+        .journey {
+            // border: 1px solid blue;
+            max-width: 729px;
+            color: #000;
+            font-family: Inter;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 50px;
+        }
+
+        .journeyText {
+            // border: 1px solid blue;
+            max-width: 652px;
+            color: #555;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            /* 41.6px */
+            margin-bottom: 53px;
+        }
+
+        .servicesButton {
+            width: 215px;
+            height: 80px;
+            border-radius: 40px;
+            background: #39DB4A;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border-style: none;
+
+            &:hover {
+                cursor: pointer;
+                background: #12c421;
+            }
+        }
+    }
+
+    .rightSection {
+        // border: 1px solid blue;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 36px;
+
+        .ourServices {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 277px;
+            height: 297.145px;
+            border-radius: 30px;
+            background: #FFF;
+            box-shadow: 7px 12px 43px 0 rgba(0, 0, 0, 0.14);
+
+            .pic {
+                width: 64px;
+                height: 64px;
+            }
+
+            .whatService {
+                margin-top: 32px;
+                color: #5FE26C;
+                text-align: center;
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: uppercase;
+                margin-bottom: 17px;
+            }
+
+            p {
+                width: 220px;
+                color: #90BD95;
+                text-align: center;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+    }
+
+}

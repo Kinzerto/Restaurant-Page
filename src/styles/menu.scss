@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    height: auto;
 
     .customerFav {
         padding-top: 33px;
@@ -34,7 +34,7 @@
         justify-content: center;
         margin-top: 72px;
         gap: 20px;
-      
+
 
         .mainDish {
             flex: 1;
@@ -90,4 +90,190 @@
             }
         }
     }
+
+    .specialDish {
+        margin-top: 100px;
+       
+        color: #FF6868;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    //standOut And Button container
+    .standOutAndButton {
+        display: flex;
+        height: min-content;
+        margin-bottom: 63px;
+
+        //text only
+        .standOutDish {
+            // border: 1px solid saddlebrown;
+            width: 580px;
+            color: #000;
+            font-family: Inter;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 131.523%;
+            padding-bottom: 63px;
+        }
+
+        .containerForButton {
+            align-self: center;
+            margin-left: auto;
+
+            display: flex;
+
+            gap: 50px;
+
+
+            div {
+
+                width: 80px;
+                height: 80px;
+                border-radius: 80px;
+                background: #EFEFEF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+
+                    cursor: pointer;
+                    background: #39DB4A;
+                }
+
+                span {
+                    font-family: 'Inter', sans-serif;
+                    color: #FFF;
+                    font-size: 44px;
+                    font-weight: 900;
+
+                }
+
+                .rightArrow {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    // containing all display
+    .standOutDishContainer {
+        // border: 1px solid red;
+        margin-bottom: 100px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+
+
+
+
+        .standFood {
+            // border: 1px solid blue;
+            width: 446px;
+            // height: 523px;
+            color: #555;
+            font-family: Inter;
+            font-size: 22px;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            border-radius: 40px;
+            background: #FFF;
+            box-shadow: 2px 9px 42px 0 rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            position: relative;
+
+            .heartIconContainer {
+
+                width: 87px;
+                height: 75px;
+                border-radius: 0 37.5px 0 42.5px;
+                background: #5555559d;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover,
+                &:hover .heartIcon,
+                .heartIcon:hover {
+                    cursor: pointer;
+                    background: #39DB4A; // applies to container
+                    color: #FF6868; // optional: change icon color
+                }
+
+                .heartIcon {
+                    color: #FFF;
+                    width: 24px;
+                    height: 24px;
+                }
+
+            }
+
+            .standOutDishPic {
+                align-self: center;
+                width: 250px;
+                height: 250px;
+            }
+
+            .foodName {
+                // border: 1px solid green;
+                color: #000;
+                font-family: Inter;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .standOutDishInfoDesc {
+                color: #555;
+                width: 100%;
+                font-family: Inter;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 1.5;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                /* show 2 lines */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .standOutDishInfoPrice {
+                .dollarSign {
+                    color: #FF6868;
+                    font-family: Inter;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                .amount {
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+
+    }
+
+
 }
