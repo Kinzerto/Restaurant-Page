@@ -39,8 +39,13 @@ nav.addEventListener('click', (event) => {
 });
 
 const bagIcon = document.querySelector('.bagIcon');
-
 bagIcon.addEventListener('click', () => {
+    content.replaceChildren();
+    maintenancePage(content);
+});
+
+const contactBtn = document.querySelector('.contact');
+contactBtn.addEventListener('click', () => {
     content.replaceChildren();
     maintenancePage(content);
 });
