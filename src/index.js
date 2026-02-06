@@ -1,6 +1,7 @@
 import "./styles/fonts.scss"
 import "./styles/styles.scss";
 import "./styles/homepage.scss";
+import "./styles/menu.scss";
 import { menuPage } from './menu.js';
 
 //homepage
@@ -32,5 +33,5 @@ nav.addEventListener('click', (event) => {
 });
 
 
-homepageLoad(content);
+menuPage();
 
