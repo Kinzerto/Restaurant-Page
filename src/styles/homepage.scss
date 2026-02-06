@@ -62,6 +62,7 @@ $minus: 20px;
             align-items: center;
 
             .orderButton {
+                
                 border-style: none;
                 width: 229px;
                 height: 80px;
@@ -74,6 +75,11 @@ $minus: 20px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+
+                &:hover {
+                    background: #12c421;
+                    cursor: pointer;
+                }
             }
 
             .watchVid {
@@ -84,6 +90,11 @@ $minus: 20px;
                 font-weight: 600;
                 line-height: normal;
                 text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
             }
 
             .playButton {
@@ -96,9 +107,10 @@ $minus: 20px;
                 width: 80px;
                 box-shadow: -2px 22px 38px 0 rgba(19, 19, 19, 0.308);
 
-
-
-                // border: 2px solid gainsboro;
+                &:hover {
+                    background: #EDEDED;
+                    cursor: pointer;
+                }
             }
         }
     }
