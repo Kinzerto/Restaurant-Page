@@ -32,11 +32,13 @@ header {
     padding: 32px var(--sides-padding);
     display: flex;
     justify-content: space-between;
-    // align-items: center;
+    align-items: center;
     // border: 2px solid red; 
 }
 
 .logo {
+    position: relative;
+    z-index: 1;
     display: flex;
     gap: 3px;
     align-items: center;
@@ -61,9 +63,14 @@ header {
 }
 
 nav {
+    // border: 2px solid red;
+    position: absolute;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    // delete this when done
+    padding-right: 50px;
     gap: 30px;
-
 }
 
 nav>* {
@@ -84,6 +91,8 @@ nav>*:hover {
 
 .order {
     /* border: 2px solid green; */
+    position: relative;
+    z-index: 1;
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -105,6 +114,7 @@ nav>*:hover {
 }
 
 .order .bagIcon {
+    // border: 1px solid red;
     display: flex;
     align-items: center;
     /* border: 2px solid red; */

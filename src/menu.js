@@ -1,3 +1,4 @@
+
 import { createElem } from "./homepage.js";
 import burgerPic from './assets/images/burger.png';
 import breakfastPic from './assets/images/breakfast.png';
@@ -5,7 +6,8 @@ import breakfastPic from './assets/images/breakfast.png';
 import dessertPic from './assets/images/dessert.png';
 import juicePic from './assets/images/juice.png';
 
-export function menuPage() {
+export function menuPage(content) {
+    content.replaceChildren();
     const menuPage = createElem('div', 'menuPage', content);
     document.title = "Menu";
 

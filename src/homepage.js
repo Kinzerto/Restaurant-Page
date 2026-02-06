@@ -1,6 +1,6 @@
 // HOMEPAGE
 // model 
-
+import { menuPage } from './menu.js';
 import girlPic from './assets/images/Intersect.png';
 // comment 
 import rectangle from './assets/images/Rectangle_24.svg';
@@ -21,7 +21,8 @@ export function createElem(element, className, parent) {
 
 export function homepageLoad(parent) {
     document.title = "Home";
-    const content = parent ;
+    const content = parent;
+    content.replaceChildren();
     const homepage = createElem('div', 'homepage', content);
 
     // SECTION LEFT
@@ -43,15 +44,24 @@ export function homepageLoad(parent) {
 
     // Order button
     const orderButton = createElem("button", "orderButton", buttons);
+    orderButton.addEventListener("click", () => {
+        content.replaceChildren();
+        menuPage(content);
+    });
     orderButton.textContent = "Order Now";
 
     // Watch Video link
     const watchVid = createElem("a", "watchVid", buttons);
-    watchVid.href = "#";
     watchVid.textContent = "Watch Video";
+    watchVid.addEventListener("click", () => {
+        window.open("https://youtu.be/Aq5WXmQQooo?si=m37QdadBzHANiTDQ", "_blank");
+    });
 
     // Play button
     const playButton = createElem("div", "playButton", buttons);
+    playButton.addEventListener("click", () => {
+        window.open("https://youtu.be/Aq5WXmQQooo?si=m37QdadBzHANiTDQ", "_blank");
+    });
 
     // SVG (needs namespace)
     const svgNS = "http://www.w3.org/2000/svg";
