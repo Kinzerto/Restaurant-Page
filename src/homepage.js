@@ -1,5 +1,6 @@
 // HOMEPAGE
 // model 
+
 import girlPic from './assets/images/Intersect.png';
 // comment 
 import rectangle from './assets/images/Rectangle_24.svg';
@@ -19,6 +20,7 @@ function createElem(element, className, parent) {
 }
 
 export function homepageLoad(parent) {
+    document.title = "Home";
     const content = parent ;
     const homepage = createElem('div', 'homepage', content);
 

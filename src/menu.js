@@ -1,1 +1,3 @@
-export const menu = 'menu';
+export function menuPage(){
+    document.title = "Menu";
+}
