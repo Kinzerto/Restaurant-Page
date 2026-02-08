@@ -1,3 +1,4 @@
+import "./styles/services.scss";
 import { createElem } from './homepage.js';
 import cateringPic from './assets/images/fi-rr-salad.svg';
 

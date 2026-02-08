@@ -1,12 +1,13 @@
 // HOMEPAGE
 // model 
+import "./styles/homepage.scss";
 import { menuPage } from './menu.js';
-import girlPic from './assets/images/Intersect.png';
+import girlPic from './assets/images/Intersect.webp';
 // comment 
 import rectangle from './assets/images/Rectangle_24.svg';
 // lower food
-import food1 from './assets/images/image 14.png';
-import food2 from './assets/images/image 13.png';
+import food1 from './assets/images/image 14.webp';
+import food2 from './assets/images/image 13.webp';
 
 //star
 import starFilled from './assets/images/fi-sr-star.svg';

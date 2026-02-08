@@ -1,3 +1,4 @@
+import "./styles/maintenance.scss";
 function createElem(element, className, parent) {
     const elem = document.createElement(element);
     // Split by spaces so 'pin pin1' becomes two classes: 'pin' and 'pin1'

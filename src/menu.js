@@ -1,3 +1,4 @@
+import "./styles/menu.scss";
 import fattoushSalad from './assets/images/Fattoush-salad.png';
 import { createElem } from "./homepage.js";
 import burgerPic from './assets/images/burger.png';
