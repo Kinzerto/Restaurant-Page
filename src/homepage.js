@@ -13,12 +13,7 @@ import food2 from './assets/images/image 13.webp';
 import starFilled from './assets/images/fi-sr-star.svg';
 import starUnFilled from './assets/images/fi-br-star.svg';
 
-export function createElem(element, className="", parent) {
-    const elem = document.createElement(element);
-    elem.classList.add(className);
-    parent.appendChild(elem);
-    return elem;
-}
+import { createElem } from './utils.js';
 
 export function homepageLoad(parent) {
     document.title = "Home";

@@ -19,14 +19,6 @@ export default {
         module: {
         rules: [
             {
-                test: /\.scss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ],
-            },
-            {
                 // IMAGES
                 test: /\.(png|svg|webp|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',

@@ -1,5 +1,5 @@
 import "./styles/services.scss";
-import { createElem } from './homepage.js';
+import { createElem } from './utils.js';
 import cateringPic from './assets/images/fi-rr-salad.svg';
 
 export function servicesPage(content) {

@@ -1,6 +1,6 @@
 import "./styles/menu.scss";
 import fattoushSalad from './assets/images/Fattoush-salad.png';
-import { createElem } from "./homepage.js";
+import { createElem } from "./utils.js";
 import burgerPic from './assets/images/burger.png';
 import breakfastPic from './assets/images/breakfast.png';
 
